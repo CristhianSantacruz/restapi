@@ -95,6 +95,27 @@ exports.getItem = async (req, res) => {
 
 exports.updateItem = async (req, res) => {
 
+  /* 
+           #swagger.tags = ['Items']
+           #swagger.description = 'Update Item'
+           #swagger.summary = 'Update Item in database'
+           #swagger.parameters['id'] = {
+               description: '',
+               required: true,
+           }
+           #swagger.parameters['data'] = {
+               in: 'body',
+               description: '',
+               required: true,
+           }
+           #swagger.responses[200] = {
+               description: '',
+           }
+           #swagger.responses[400] = {
+               description: '',
+           }
+       */
+
   try {
       const itemId = req.params.id;
       const data = req.body;
@@ -108,6 +129,23 @@ exports.updateItem = async (req, res) => {
 };
 
 exports.deleteItem = async (req, res) => {
+
+       /* 
+         #swagger.tags = ['Items']
+         #swagger.description = 'Delete item'
+         #swagger.summary = 'Delete item by Id'
+         #swagger.parameters['id'] = {
+             description: '',
+             required: true,
+         }
+
+         #swagger.responses[200] = {
+             description: '',
+         }
+         #swagger.responses[400] = {
+             description: '',
+         }
+       */
 
   try {
       const itemId = req.params.id;

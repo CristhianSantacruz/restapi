@@ -109,13 +109,28 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Items"
+        ],
+        "summary": "Update Item in database",
+        "description": "Update Item",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
           }
         ],
         "responses": {
@@ -128,13 +143,18 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Items"
+        ],
+        "summary": "Delete item by Id",
+        "description": "Delete item",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
           }
         ],
         "responses": {
