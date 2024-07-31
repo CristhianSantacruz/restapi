@@ -15,11 +15,12 @@
  });
 
  const app = express();
+
  app.use(bodyParser.json());
 
  const PORT = process.env.PORT || 5000;
- app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerFile))
- app.use('/api', require('./routes/api'));
+ app.use('/documentation',  swaggerUi.serve, swaggerUi.setup(swaggerFile))
+ app.use('/api',  require('./routes/api'));
 
  app.listen(PORT, () => {
    console.log(`Server is running on port ${PORT}`);
