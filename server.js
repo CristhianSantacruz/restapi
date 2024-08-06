@@ -3,7 +3,6 @@
  const express = require('express');
  const bodyParser = require('body-parser');
  const admin = require('firebase-admin');
-
  const swaggerUi = require('swagger-ui-express')
  const swaggerFile = require('./swagger_output.json')
 

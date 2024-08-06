@@ -13,6 +13,17 @@ exports.createItem = async (req, res) => {
          description: 'Data to create an item',
          required: true,
      }
+    #swagger.parameters['Token'] = {
+      in: 'header',
+      description: 'JWT token ',
+      required: true,
+      schema: {
+        type: 'string',
+      }
+    }
+    #swagger.responses[408] = {
+      description: 'Request Timeout',
+    }
      #swagger.responses[201] = {
          description: 'Item successfully created',
      }
@@ -39,6 +50,17 @@ exports.getAllItems = async (req, res) => {
     #swagger.tags = ['Items']
     #swagger.description = 'Get all items entries'
     #swagger.summary = 'Get all items entries'
+    #swagger.parameters['Token'] = {
+      in: 'header',
+      description: 'JWT token ',
+      required: true,
+      schema: {
+        type: 'string',
+      }
+    }
+    #swagger.responses[408] = {
+      description: 'Request Timeout',
+    }
     #swagger.responses[200] = {
         description: 'Items entries successfully obtained',
         schema: {
@@ -46,6 +68,8 @@ exports.getAllItems = async (req, res) => {
             items: { $ref: '#/definitions/Item' }
         }
     }
+
+    
     #swagger.responses[400] = {
         description: 'Bad request',
     }
@@ -69,6 +93,17 @@ exports.getItem = async (req, res) => {
          description: 'Item id',
          required: true,
      }
+    #swagger.parameters['Token'] = {
+      in: 'header',
+      description: 'JWT token ',
+      required: true,
+      schema: {
+        type: 'string',
+      }
+    }
+    #swagger.responses[408] = {
+      description: 'Request Timeout',
+    }
      #swagger.responses[404] = {
          description: 'Item not found',
      }
@@ -109,6 +144,17 @@ exports.updateItem = async (req, res) => {
                description: '',
                required: true,
            }
+          #swagger.parameters['Token'] = {
+            in: 'header',
+            description: 'JWT token ',
+            required: true,
+            schema: {
+              type: 'string',
+            }
+          }
+          #swagger.responses[408] = {
+            description: 'Request Timeout',
+          }
            #swagger.responses[200] = {
                description: '',
            }
@@ -139,6 +185,17 @@ exports.deleteItem = async (req, res) => {
              description: '',
              required: true,
          }
+        #swagger.parameters['Token'] = {
+          in: 'header',
+          description: 'JWT token ',
+          required: true,
+          schema: {
+            type: 'string',
+          }
+        }
+        #swagger.responses[408] = {
+          description: 'Request Timeout',
+        }
 
          #swagger.responses[200] = {
              description: '',
