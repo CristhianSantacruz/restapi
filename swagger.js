@@ -5,11 +5,11 @@ const doc = {
     "title": 'REST API',
     "description": 'REST API with Express and Firestore'
   },
-  "host": 'localhost:5500',
-  //"host":"restapi-nuh2.onrender.com",
-  //"schemes" : [
-  //  "https"
- // ],
+  //"host": 'localhost:5500',
+  "host":"restapi-nuh2.onrender.com",
+  "schemes" : [
+    "https"
+  ],
   "basePath": "/api",
 };
 
