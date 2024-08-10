@@ -1,14 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "REST API",
-    "description": "REST API with Express and Firestore",
-    "version": "1.0.0"
+    "version": "v1.0.0",
+    "title": "REST API WITH TOKEN",
+    "description": "REST API with Express and Firestore, Token"
   },
-  "host": "localhost:5500",
+  "host": "restapi-nuh2.onrender.com",
   "basePath": "/api",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/items": {
@@ -32,15 +32,6 @@
             "schema": {
               "type": "object",
               "properties": {}
-            }
-          },
-          {
-            "name": "Token",
-            "in": "header",
-            "description": "JWT token ",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -70,15 +61,6 @@
             "name": "token",
             "in": "header",
             "type": "string"
-          },
-          {
-            "name": "Token",
-            "in": "header",
-            "description": "JWT token ",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -141,15 +123,6 @@
             "name": "token",
             "in": "header",
             "type": "string"
-          },
-          {
-            "name": "Token",
-            "in": "header",
-            "description": "JWT token ",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -198,15 +171,6 @@
               "type": "object",
               "properties": {}
             }
-          },
-          {
-            "name": "Token",
-            "in": "header",
-            "description": "JWT token ",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -242,15 +206,6 @@
             "name": "token",
             "in": "header",
             "type": "string"
-          },
-          {
-            "name": "Token",
-            "in": "header",
-            "description": "JWT token ",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -267,6 +222,15 @@
             "description": "Request Timeout"
           }
         }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "apiKey",
+        "name": "Token",
+        "in": "header"
       }
     }
   }

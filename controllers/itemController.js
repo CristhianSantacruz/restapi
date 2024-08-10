@@ -13,14 +13,7 @@ exports.createItem = async (req, res) => {
          description: 'Data to create an item',
          required: true,
      }
-    #swagger.parameters['Token'] = {
-      in: 'header',
-      description: 'JWT token ',
-      required: true,
-      schema: {
-        type: 'string',
-      }
-    }
+    
     #swagger.responses[408] = {
       description: 'Request Timeout',
     }
@@ -50,14 +43,6 @@ exports.getAllItems = async (req, res) => {
     #swagger.tags = ['Items']
     #swagger.description = 'Get all items entries'
     #swagger.summary = 'Get all items entries'
-    #swagger.parameters['Token'] = {
-      in: 'header',
-      description: 'JWT token ',
-      required: true,
-      schema: {
-        type: 'string',
-      }
-    }
     #swagger.responses[408] = {
       description: 'Request Timeout',
     }
@@ -92,15 +77,7 @@ exports.getItem = async (req, res) => {
      #swagger.parameters['id'] = {
          description: 'Item id',
          required: true,
-     }
-    #swagger.parameters['Token'] = {
-      in: 'header',
-      description: 'JWT token ',
-      required: true,
-      schema: {
-        type: 'string',
-      }
-    }
+     }   
     #swagger.responses[408] = {
       description: 'Request Timeout',
     }
@@ -144,14 +121,6 @@ exports.updateItem = async (req, res) => {
                description: '',
                required: true,
            }
-          #swagger.parameters['Token'] = {
-            in: 'header',
-            description: 'JWT token ',
-            required: true,
-            schema: {
-              type: 'string',
-            }
-          }
           #swagger.responses[408] = {
             description: 'Request Timeout',
           }
@@ -185,14 +154,7 @@ exports.deleteItem = async (req, res) => {
              description: '',
              required: true,
          }
-        #swagger.parameters['Token'] = {
-          in: 'header',
-          description: 'JWT token ',
-          required: true,
-          schema: {
-            type: 'string',
-          }
-        }
+        
         #swagger.responses[408] = {
           description: 'Request Timeout',
         }
