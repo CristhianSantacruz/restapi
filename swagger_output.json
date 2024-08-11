@@ -72,9 +72,6 @@
                 "type": {
                   "type": "string",
                   "example": "array"
-                },
-                "items": {
-                  "$ref": "#/definitions/Item"
                 }
               },
               "xml": {

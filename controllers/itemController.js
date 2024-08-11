@@ -50,7 +50,6 @@ exports.getAllItems = async (req, res) => {
         description: 'Items entries successfully obtained',
         schema: {
             type: 'array',
-            items: { $ref: '#/definitions/Item' }
         }
     }
 
